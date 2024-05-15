@@ -1,15 +1,27 @@
-function dis(val){
-    document.getElementById("result").value+=val
+function dis(val){   
+    const resultInput = document.getElementById("result");
+    resultInput.value += val;
+    let value = resultInput.value.replace(/[^\d.*/+-]/g, '');
+    value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    resultInput.value = value;
 }
-  
+ 
 function solve(){
-    let x = document.getElementById("result").value
-    let y = eval(x)
-    document.getElementById("result").value = y
+    let x = document.getElementById("result").value.replace(/,/g, '');
+    let y = eval(x);
+    let formattedResult = y.toLocaleString('en-US');
+    document.getElementById("result").value = formattedResult;
 }
   
 function clr(){
     document.getElementById("result").value = ""
+}
+
+function bck() {
+    let result = document.getElementById("result");
+    if (result) {
+        result.value = result.value.slice(0, -1);
+    }
 }
 
 function toggleButtons() {

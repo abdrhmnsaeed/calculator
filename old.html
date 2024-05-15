@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,5 +42,31 @@
       </table>
 
       <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Input with Commas</title>
+</head>
+<body>
+
+<input type="text" id="numberInput" placeholder="Enter a number">
+
+<script>
+const numberInput = document.getElementById('numberInput');
+
+numberInput.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/[^\d.*/+-]/g, ''); // Remove invalid characters
+    value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Add commas every three digits
+    e.target.value = value;
+});
+</script>
+
 </body>
 </html>

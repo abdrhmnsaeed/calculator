@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 
 body {
@@ -62,7 +65,7 @@ body {
 .container{
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 400px;
     position: relative;
 }
 
@@ -72,11 +75,12 @@ body {
 
 .result input{
     width: 100%;
-    height: 130px;
-    padding: 10px;
-    background-color: #191b1d;
+    height: 150px;
+    padding: 50px;
+    background-color: #DDE2E5;
+    /* background-color: #191b1d; */
     border: 1px solid #000000;
-    color: #fff;
+    color: black;
     border-radius: 0 20px 0 0;
     font-size: 25px;
 }
@@ -89,23 +93,24 @@ body {
 }
 
 .numbersBTN input{
-    height: 90px;
+    height: 100px;
     font-size: 20px;
-    background-color: #1e2022;
+    /* background-color: #1e2022; */
+    background-color: #B3A28E;
     color: #fff;
     border: 1px solid black;
     cursor: pointer;
 }
     
 .controls{
-    height: 62%;
+    height: 67%;
     display: flex;
     flex-direction: column;
     z-index: 10;
     position: absolute;
     width: 50px;
     left: -25px;
-    top: 120px;
+    top: 70px;
 }
 
 #dot{
@@ -116,7 +121,8 @@ body {
     position: static;
     width: 50px;
     height: 50px;
-    background: #b1b1b1;
+    /* background: #b1b1b1; */
+    background: #8AC3DE;
     display: flex;
     cursor: pointer;
     margin: auto;
@@ -133,7 +139,7 @@ body {
     cursor: pointer;
     height: 50px;
     width: 50px;
-    background: green;
+    background: #559BCF;
     border-radius: 8px 0px 0 0;
     color: #fff;
     font-size: 16px;
@@ -157,9 +163,10 @@ body {
     bottom: -12px;
     width: calc(33% * 1.25);
     height: calc(27% * 1.25);
-    background: #000000;
+    background: #8A7564;
+    /* background: #000000; */
     color: #fff;
-    border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 20px;
     border: 0.5px rgba(0, 0, 0, 0.0001);
 }
 

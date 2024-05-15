@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,11 +18,12 @@
 
         <div class="controls">
             <input type="button" id="clear" value="AC" onclick="clr()"/>
+            <input type="button" id="back" value="&#9003;" onclick="bck()"/>
             <input type="button" value="off" id="toggle" onclick="toggleButtons()">
             <input type="button" value="÷" onclick="dis('/')"/>
             <input type="button" value="-" onclick="dis('-')"/>
             <input type="button" value="+" onclick="dis('+')"/>
-            <input type="button" id="product" value="*" onclick="dis('*')"/>
+            <input type="button" id="product" value="x" onclick="dis('*')"/>
         </div>
 
         <div class="numbersBTN">

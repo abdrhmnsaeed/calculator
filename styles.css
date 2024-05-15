@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(
+        circle farthest-side at 0% 50%,
+        #282828 23.5%,
+        rgba(255, 170, 0, 0) 0
+      )
+      21px 30px,
+    radial-gradient(
+        circle farthest-side at 0% 50%,
+        #2c3539 24%,
+        rgba(240, 166, 17, 0) 0
+      )
+      19px 30px,
+    linear-gradient(
+        #282828 14%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 85%,
+        #282828 0
+      )
+      0 0,
+    linear-gradient(
+        150deg,
+        #282828 24%,
+        #2c3539 0,
+        #2c3539 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #2c3539 0,
+        #2c3539 76%,
+        #282828 0
+      )
+      0 0,
+    linear-gradient(
+        30deg,
+        #282828 24%,
+        #2c3539 0,
+        #2c3539 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #2c3539 0,
+        #2c3539 76%,
+        #282828 0
+      )
+      0 0,
+    linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0
+      #282828;
+  background-size: 40px 60px;
+  }
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    position: relative;
+}
+
+.result{
+    width: 90%;
+}
+
+.result input{
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    background-color: #191b1d;
+    border: 1px solid #000000;
+    color: #fff;
+    border-radius: 0 20px 0 0;
+    font-size: 25px;
+}
+
+.numbersBTN{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+}
+
+.numbersBTN input{
+    height: 90px;
+    font-size: 20px;
+    background-color: #1e2022;
+    color: #fff;
+    border: 1px solid black;
+    cursor: pointer;
+}
+    
+.controls{
+    height: 62%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: absolute;
+    width: 50px;
+    left: -25px;
+    top: 120px;
+}
+
+#dot{
+    border-radius: 0 0 0 20px;
+}
+
+.controls input{
+    position: static;
+    width: 50px;
+    height: 50px;
+    background: #b1b1b1;
+    display: flex;
+    cursor: pointer;
+    margin: auto;
+    border: 0;
+    font-size: 20px;
+}
+
+.controls input:hover{
+    background: #29282838;
+    color: #ffffff;
+}
+
+#clear{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background: green;
+    border-radius: 8px 0px 0 0;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+#clear:hover{
+    background: #00000064;
+    color: #ffffff;
+}
+
+#product{
+    border-radius: 0 0 8px 0;
+}
+
+
+
+#equalsTo{
+    position: absolute;
+    right: -12px;
+    bottom: -12px;
+    width: calc(33% * 1.25);
+    height: calc(27% * 1.25);
+    background: #000000;
+    color: #fff;
+    border-bottom-right-radius: 8px;
+    border: 0.5px rgba(0, 0, 0, 0.0001);
+}
+
+@media screen and (max-width: 425px) {
+    .container{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .container{
+        width: 270px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container{
+        width: 250px;
+    }
+}
+@media screen and (max-width: 290px) {
+    .container{
+        width: 200px;
+    }
+}

@@ -1,10 +1,13 @@
-function dis(val){   
+function dis(val) {   
     const resultInput = document.getElementById("result");
-    resultInput.value += val;
-    let value = resultInput.value.replace(/[^\d.*/+-]/g, '');
-    value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    resultInput.value = value;
+    if (resultInput.value.trim().length < 19) {
+        resultInput.value += val;
+        let value = resultInput.value.replace(/[^\d.*/+-]/g, '');
+        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        resultInput.value = value;
+    }
 }
+
  
 function solve(){
     let x = document.getElementById("result").value.replace(/,/g, '');
